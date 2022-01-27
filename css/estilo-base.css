@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-style: none;
+    list-style: none;
+    font-family: 'heebo';
+    letter-spacing: 0.05rem;
+}
+
+button{
+    background: none;
+    border: none;
+}
+
+@font-face {
+    font-family: 'heebo';
+    src: url("../fonts/Heebo-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'heebo-bold';
+    /* src: url("/fonts/Heebo-Bold.ttf"); */
+    src: url("../fonts/Heebo-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'heebo-light';
+    src: url("../fonts/Heebo-Light.ttf");
+}

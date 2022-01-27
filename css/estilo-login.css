@@ -1,0 +1,599 @@
+@keyframes slide-fundo{
+    from{
+        background-image: url("../img/fundo-globo.svg");
+        background-repeat: no-repeat;
+        /* background-size: auto; */
+        background-position: right;
+
+        transition: 1s;
+    }
+    to{
+        background-image: url("../img/fundo-globo.svg");
+        background-position: left;
+        transition: 1s;
+    }
+}
+
+@keyframes slide-banner2{
+    from{
+        
+        background-image: url("../img/fundo-satelite.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        opacity: 0;
+        transition: 1s;
+    }
+    to{
+        background-image: url("../img/fundo-satelite.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        opacity: 1;
+        transition: 1s;
+    }
+}
+
+body{
+    position: relative;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+
+    animation: slide-fundo 70s forwards infinite;
+
+}
+
+
+body.active .grid-corpo{
+    animation: slide-banner2 2s forwards;
+}
+
+/* Estilo Corpo */
+body .grid-corpo{
+    width: 100%;
+    height: 100%;
+    /* background-color: #005ef6e7; */
+    transition: 1s;
+    background-image: url("../img/mascara-azul.svg");
+
+    display: grid;
+    grid-template-columns: minmax(100px, 130px) minmax(650px, 1fr) minmax(500px, 635px);
+}
+
+/* Estilo Primeira Coluna - Linhas */
+.grid-corpo .grid-corpo-linhas{
+    background-image: url('../img/curvas-linhas.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    transition: .5s;
+}
+
+/* Estilo Segunda Coluna - Banners */
+.grid-corpo .grid-corpo-banner{
+    width: 100%;
+    min-height: 700px;
+    height: calc(100vh - 240px);
+    margin: 80px 0;
+    padding: 134px 50px;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    transition: .5s;
+}
+
+/* Estilo Segunda Coluna - Banners - coluna1 */
+
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna1{
+    display: block;
+    justify-self: center;
+    align-self: center;
+    margin-right: 50px;
+}
+
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna1 ul li{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna1 ul li:hover{
+    background-color: white;
+}
+
+/* Estilo Segunda Coluna - Banners - coluna2 */
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna2{
+    /* margin-right: 80px; */
+}
+
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna2 .banner-btn-setas > button{
+    width: 32.25px;
+    height: 32.25px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna2 .banner-btn-setas > button:hover svg path{ 
+    fill: rgba(255, 255, 255, 0.5);
+}
+
+
+/* ESTILO QUE OCULTA TODOS OS BANNERS */
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna2 .box-banner-conteudo .banner-conteudo{
+    margin-top: 45px;
+    opacity: 0;
+    transform: translate(0px, 120px);
+    transition: 1s;
+}
+
+.grid-corpo-banner .grid-corpo-banner-coluna2 .box-banner-conteudo .banner-conteudo .wrappe-banner{
+    display: none;
+}
+
+/* ESTILO QUE MOSTRA TODOS OS BANNERS */
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna2 .box-banner-conteudo .banner-conteudo.active{
+    opacity: 1;
+    transform: translate(0px, 0px);
+    transition: 1s;
+}
+
+.grid-corpo-banner .grid-corpo-banner-coluna2 .box-banner-conteudo .banner-conteudo.active .wrappe-banner{
+    display: block;
+}
+
+/* ESTILO BANNERS 1 */
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna2 .banner-conteudo h1{
+    font-size: 61px;
+    line-height: 60px;
+    max-width: 470px;
+    color: white;
+}
+
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna2 .banner-conteudo p{
+    margin-top: 42px;
+    font-size: 18px;
+    line-height: 26px;
+    max-width: 730px;
+    color: white;
+}
+
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna2 .box-banner-conteudo > div button{
+    margin-top: 24px;
+   width: 413px;
+   height: 70px;
+   border-radius: 50px;
+   border: 2px solid white;
+   font-size: 18px;
+   letter-spacing: 0.1em;
+   /* font-weight: bold; */
+   color: white;
+   cursor: pointer;
+   transition: .5s;
+}
+
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna2 .box-banner-conteudo div > button:hover{
+    background: white;
+    color: #005ff6;
+}
+
+/* ESTILO BANNER 2 */
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna2 #banner2 h1{
+    font-size: 50px;
+    font-family: 'heebo-light';
+    font-weight: 200;
+    line-height: 50px;
+    max-width: 370px;
+    color: white;
+}
+
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna2 #banner2 h1 #destaque1{
+    font-family: 'heebo-bold';
+}
+
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna2 #banner2 h1 #destaque2{
+    font-family: 'heebo-light';
+    position: relative;
+
+}
+
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna2 #banner2 h1 #destaque2::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    height: 4px;
+    background: #005ff6;
+
+}
+
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna2 #banner2 .wrappe-emoj{
+    margin-top: 120px;
+    background: #005ff6;
+    padding: 1px 40px;
+    width: 550px;
+    height: 200px;
+    max-width: 620px;
+    min-width: 420px;
+    position: relative;
+}
+
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna2 #banner2 .wrappe-emoj p{
+    font-family: 'heebo-light';
+    font-size: 50px;
+    line-height: 60px;
+}
+
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna2 #banner2 .wrappe-emoj p span{
+    font-family: 'heebo-bold';
+    font-size: 50px;
+    line-height: 60px;
+}
+
+.grid-corpo .grid-corpo-banner .grid-corpo-banner-coluna2 #banner2 .wrappe-emoj > span svg{
+    position: absolute;
+    top: 0px;
+    right: -30px;
+    bottom: 0px;
+    margin: auto 0;
+    width: 70px;
+    height: 80px;
+    background: white;
+    padding: 10px;
+}
+
+/* Estilo Terceira Coluna - Box Login */
+.grid-corpo .grid-corpo-box-login{
+    /* max-height: 750px; */
+    max-width: 635px;
+    margin: 80px 60px;
+    padding: 80px 40px;
+    transition: .5s;
+    background-color: rgba(255, 255, 255, 0.05);
+    /* filter: blur(10px); */
+    border: 2px solid rgba(255, 255, 255, 0.105);
+    border-radius: 8px;
+    text-align: center;
+
+    position: relative;
+    z-index: 10;
+}
+
+
+
+/* Estilo Terceira Coluna - Box Login - formulario */
+
+/* Definições de ocultação */
+.grid-corpo .grid-corpo-box-login .box-login-form{
+    transform: translate(0px, -10px);
+    opacity: 0;
+    transition: 1s;
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-form .box-login-form-conteudo{
+    display: none;
+}
+
+/* Definições de ativação */
+.grid-corpo .grid-corpo-box-login .box-login-form.active{
+    margin-top: 90px;
+    width: 100%;
+
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: 1s;
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-form.active .box-login-form-conteudo{
+    display: block;
+}
+
+/* Estilo Terceira Coluna - Box Login - Campos de entrada */
+.grid-corpo .grid-corpo-box-login .box-login-form-fundo{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    text-align: left;
+    padding: 0 30px;
+    border: 2px solid white;
+    border-radius: 50px;
+    margin-bottom: 25px;
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-form-fundo img{
+    width: 18.97px;
+    /* height: 22.76px; */
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-form-fundo > input{
+    width: 100%;
+    height: 100%;
+    background: none;
+    padding: 0 20px;
+    color: rgba(255, 255, 255, 0.705);
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-form-fundo > input::placeholder{
+    color: rgba(255, 255, 255, 0.301);
+    font-family: 'heebo-light';
+}
+
+/* Estilo Terceira Coluna - Box Login - check box */
+.grid-corpo .grid-corpo-box-login .box-login-form .box-login-form-check{
+    display: flex;
+    justify-content: center;
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-form .box-login-form-check > label{
+    font-family: 'heebo-light';
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-form .box-login-form-check > input{
+    all: unset;
+    border: solid 2px white;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-form .box-login-form-check > input:checked::before{
+    content: '';
+    display: block;
+    width: 8px;
+    height: 3px;
+    position: absolute;
+    background: white;
+    top: 4px;
+    left: -7px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotate(45deg);
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-form .box-login-form-check > input:checked::after{
+    content: '';
+    display: block;
+    width: 15px;
+    height: 3px;
+    position: absolute;
+    background: white;
+    top: 0;
+    left: 5px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotate(135deg);
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-form .box-login-form-check .texto{
+    margin-left: 10px;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* Estilo Terceira Coluna - Box Login - botato */
+.grid-corpo .grid-corpo-box-login .box-login-form-botao{
+    margin: 24px 0;
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-form-botao > button{
+    width: 100%;
+    height: 70px;
+    border: 2px solid white;
+    border-radius: 50px;
+    background: white;
+    color: #005ff6;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-form-botao > button:hover{
+    background: none;
+    color: white;
+}
+
+/* Estilo Terceira Coluna - Box Login - Redefinir Senha */
+.grid-corpo .grid-corpo-box-login .box-login-form-box-cadastro{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 18px;
+    color: white;
+    flex-wrap: nowrap;
+    
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-form-box-cadastro p{
+    font-family: 'heebo-light';
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-form-box-cadastro a{
+    color: white;
+    font-family: 'heebo-bold';
+
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-form-box-cadastro a:hover{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Estilo Terceira Coluna - Box Login - Box Redefinir Senha */
+.grid-corpo .grid-corpo-box-login .box-login-redefinir.active{
+    margin-top: 90px;
+    width: 100%;
+    color: white;
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: 1s;
+    /* margin-bottom: 60px; */
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-redefinir p{
+    margin-bottom: 25px;
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-redefinir{
+    transform: translate(0px, 180px);
+    opacity: 0;
+    transition: 1s;
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-redefinir .box-login-form-conteudo{
+    display: none;
+}
+
+.grid-corpo .grid-corpo-box-login .box-login-redefinir.active .box-login-form-conteudo{
+    display: block;
+}
+
+
+
+/* Estilo Terceira Coluna - Box Login - Direitos */
+.grid-corpo .grid-corpo-box-login .box-login-direitos{
+    width: 100%;
+    /* height: 30px; */
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    margin: 0 auto;
+    /* margin-top: 60px; */
+    color: rgba(255, 255, 255, 0.5);
+    /* font-size: 13px; */
+}
+
+/* Box Mensagem de Erro! */
+.grid-corpo #box-msg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+
+    width: 500px;
+    height: 0px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.459);
+
+    transform: translate(0px, -50px);
+    opacity: 0;
+    transition: .5s;
+    z-index: 0;
+
+}
+
+.grid-corpo #box-msg #btnClose{
+    background: none;
+    border: none;
+    background-color: #626262;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 10px;
+    text-align: center;
+    cursor: pointer;
+
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.grid-corpo #box-msg #btnClose:hover{
+    background-color: #0052f3;
+}
+
+.grid-corpo #box-msg.active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+    height: 250px;
+    z-index: 1000;
+    
+}
+
+.grid-corpo #box-msg .box-msg-fundo{
+    display: none;
+}
+
+.grid-corpo #box-msg.active .box-msg-fundo{
+    display: block;
+}
+
+.grid-corpo #box-msg #logo{
+    width: 100px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.grid-corpo #box-msg #emoj{
+    display: inline-block;
+    margin-bottom: 30px;
+    
+}
+
+.grid-corpo #box-msg #texto{
+    color: #424242;
+    margin-bottom: 40px;
+}
+
+.grid-corpo #box-msg #sub-texto{
+    font-size: 12px;
+    font-style: italic;
+    color: #838383;
+}
+
+/* MEDIA QUERY */
+@media (max-height: 840px), (max-width: 1280px){
+    /* Estilo Segunda Coluna - Banners */
+    .grid-corpo .grid-corpo-banner{
+        min-height: 600px;
+        margin: 60px 0;
+        padding: 34px 10px;
+    }
+
+    .grid-corpo .grid-corpo-box-login{
+        margin: 60px 50px;
+    
+    }
+
+    .grid-corpo .grid-corpo-box-login{
+        max-height: 700px;
+        margin: 40px 50px;
+        padding: 40px;
+    
+    }
+
+    .grid-corpo .grid-corpo-box-login .box-login-form.active{
+        margin-top: 45px;
+        width: 100%;
+    }
+
+    .grid-corpo .grid-corpo-box-login .box-login-form-box-cadastro{
+        font-size: 15px;
+    }
+
+    .grid-corpo .grid-corpo-box-login .box-login-direitos{
+        font-size: 13px;
+    }
+  
+}

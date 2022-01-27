@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Importação Estilo -->
+    <link rel="stylesheet" href="css/estilo-base.css">
+    <link rel="stylesheet" href="css/estilo-login.css">
+
+    <!-- Importação JS -->
+    <script src="js/script-login.js" defer></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/icon-azul.png" type="image/x-icon">
+
+    <title>GeoInova - Login</title>
+</head>
+<body>
+
+    
+    <main class="grid-corpo">
+
+        <section class="grid-corpo-linhas">
+            <!-- <img src="img/curvas-linhas.svg" alt=""> -->
+        </section>
+
+        <section class="grid-corpo-banner">
+
+            <div class="grid-corpo-banner-coluna1">
+                <!-- <ul class="btn-circulos">
+                    <li><a href="#" class="btn-circulo" id="btn-circulo1">x</a></li>
+                    <li><a href="#" class="btn-circulo" id="btn-circulo2">x</a></li>
+                    <li><a href="#" class="btn-circulo" id="btn-circulo3">x</a></li>
+                    <li><a href="#" class="btn-circulo" id="btn-circulo4">x</a></li>
+                </ul> -->
+
+                <ul class="btn-circulos">
+                    <li class="btn-circulo" id="btn-circulo1"></li>
+                    <li class="btn-circulo" id="btn-circulo2"></li>
+                    <li class="btn-circulo" id="btn-circulo3"></li>
+                    <li class="btn-circulo" id="btn-circulo4"></li>
+                </ul>
+            </div>
+
+            <div class="grid-corpo-banner-coluna2">
+                <div class="banner-btn-setas">
+                    <button class="btn-seta" id="btn-seta-back">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32.188" height="32.248" viewBox="0 0 32.188 32.248">
+                            <path id="Caminho_614" data-name="Caminho 614" d="M1143.283,515.346a16.094,16.094,0,0,0,32.187.023,16.219,16.219,0,0,0-16.029-16.2A16.044,16.044,0,0,0,1143.283,515.346Zm12.3,1.32c.139.155.221.253.31.344.624.642,1.258,1.275,1.873,1.927a1.143,1.143,0,0,1-.038,1.712,1.159,1.159,0,0,1-1.714.007q-2.2-2.226-4.37-4.476a1.194,1.194,0,0,1,0-1.76q2.226-2.254,4.479-4.482a1.229,1.229,0,0,1,1.718,1.758c-.635.65-1.284,1.287-1.925,1.931-.078.079-.147.168-.265.305h.5c3.248,0,6.5-.009,9.743.013a1.972,1.972,0,0,1,1,.3,1.268,1.268,0,0,1,.455,1.5,1.38,1.38,0,0,1-1.367.918q-4.952,0-9.9,0Z" transform="translate(-1143.282 -499.173)" fill="#fff"/>
+                          </svg>
+                    </button>
+                    <button class="btn-seta" id="btn-seta-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32.188" height="32.248" viewBox="0 0 32.188 32.248">
+                            <path id="Caminho_615" data-name="Caminho 615" d="M1175.47,515.346a16.094,16.094,0,0,1-32.187.023,16.219,16.219,0,0,1,16.029-16.2A16.044,16.044,0,0,1,1175.47,515.346Zm-12.3,1.32c-.139.155-.221.253-.31.344-.624.642-1.258,1.275-1.873,1.927a1.143,1.143,0,0,0,.038,1.712,1.159,1.159,0,0,0,1.714.007q2.2-2.226,4.37-4.476a1.194,1.194,0,0,0,0-1.76q-2.226-2.254-4.479-4.482a1.229,1.229,0,0,0-1.718,1.758c.635.65,1.284,1.287,1.925,1.931.078.079.147.168.265.305h-.5c-3.248,0-6.5-.009-9.743.013a1.972,1.972,0,0,0-1,.3,1.268,1.268,0,0,0-.455,1.5,1.38,1.38,0,0,0,1.367.918q4.952,0,9.9,0Z" transform="translate(-1143.282 -499.173)" fill="#fff"/>
+                          </svg>
+                    </button>
+                </div>
+
+                <section class="box-banner-conteudo">
+
+                    <!-- Banner 1 -->
+                    <div class="banner-conteudo active" id="banner1">
+
+                        <div class="wrappe-banner"> <!-- Essa div permite ocultar o conteudo usando display none e ainda assim usar efeito de transição na div anterior -->
+                            <h1>Monitoramento Digital de Áreas e Territórios</h1>
+                            <p>Inovamaps é uma plataforma digital de sensoriamento remoto que oferece não apenas imagens de satélite, mas também a possibilidade de monitorar pequenas ou grandes extensões de áreas e propriedades. O monitoramento é feito de forma preventiva, ou seja, é possível detectar problemas como desmatamento, invasão de propriedades, aproximação entre duas áreas, entre vários outros itens.</p>
+        
+                            <button class="botao" id="btn-saiba-mais">Saiba mais</button>
+                        </div>
+                    </div>
+
+                    <!-- Banner 2 -->
+                    <div class="banner-conteudo" id="banner2">
+
+                        <div class="wrappe-banner"> <!-- Essa div permite ocultar o conteudo usando display none e ainda assim usar efeito de transição na div anterior -->
+                            <h1> <span id="destaque1">Monitoramento</span> digital de áreas e <span id="destaque2">territórios</span></h1>
+
+                            <div class="wrappe-emoj">
+                                <p>Nós somos a <span>transformação</span> __</p>
+                                <span class="fundo-emoj">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="61.28" height="61.281" viewBox="0 0 61.28 61.281">
+                                        <g id="Grupo_1" data-name="Grupo 1" transform="translate(0 0)">
+                                        <rect id="Retângulo_3" data-name="Retângulo 3" width="12.256" height="24.513" transform="translate(12.256 0)" fill="#005ff6"/>
+                                        <rect id="Retângulo_4" data-name="Retângulo 4" width="12.256" height="24.513" transform="translate(36.768 0)" fill="#005ff6"/>
+                                        <rect id="Retângulo_5" data-name="Retângulo 5" width="36.769" height="12.256" transform="translate(12.256 49.025)" fill="#005ff6"/>
+                                        <rect id="Retângulo_6" data-name="Retângulo 6" width="12.256" height="12.256" transform="translate(0 36.768)" fill="#005ff6"/>
+                                        <rect id="Retângulo_7" data-name="Retângulo 7" width="12.256" height="12.256" transform="translate(49.024 36.768)" fill="#005ff6"/>
+                                        </g>
+                                    </svg>
+                                  </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                
+
+
+
+            </div>
+
+        </section>
+
+        <section class="grid-corpo-box-login">
+              
+            <div class="box-login-logo">
+                <img src="img/logo.svg" alt="">
+            </div>
+
+            <div class="box-login-form active">
+
+                <div class="box-login-form-conteudo"> <!-- Essa div permite ocultar o conteudo usando display none e ainda assim usar efeito de transição na div anterior -->
+
+                    <div class="box-login-form-fundo">
+                        <img src="img/icone-usuario.svg" alt="">
+                        <input type="text" name="text-usuario" id="txt-usuario" placeholder="Usuário">
+                    </div>
+
+                    <div class="box-login-form-fundo">
+                        <img src="img/icone-senha.svg" alt="">
+                        <input type="password" name="text-senha" id="txt-senha" placeholder="Senha">
+                    </div>
+
+                    <div class="box-login-form-check">
+                        <input type="checkbox" name="conectado" id="checkConectado">
+                        <label class="texto" for="checkConectado">Manter conectado</label>
+                        
+                    </div>
+
+                    <div class="box-login-form-botao">
+                        <button class="botao" id="btn-acessar">Acessar</button>
+                    </div>
+
+                    <div class="box-login-form-box-cadastro">
+                        <p>Esqueceu sua senha?</p>
+                        <a id="btnRedefinirSenha" href="#">Clique aqui!</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="box-login-redefinir">
+
+                <div class="box-login-form-conteudo"> <!-- Essa div permite ocultar o conteudo usando display none e ainda assim usar efeito de transição na div anterior -->
+
+
+                    <p>Redefinir senha</p>
+
+                    <div class="box-login-form-fundo">
+                        <img src="img/icone-email.svg" alt="">
+                        <input type="email" name="text-email" id="text-email" placeholder="Email">
+                    </div>
+
+                    <div class="box-login-form-botao">
+                        <button class="botao" id="btn-acessar">Solicitar redefinição de senha</button>
+                    </div>
+
+                    <div class="box-login-form-box-cadastro">
+                        <p>Já possuí cadastro?</p>
+                        <a id="btnCadastrado" href="#">Clique aqui e acesse.</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="box-login-direitos">
+                <p>©2021 GeoInova | Todos os direitos reservados.</p>
+            </div>
+
+        </section>
+
+        <!-- POPUP MSG -->
+        <section id="box-msg">
+            <button id="btnClose">X</button>
+            <div class="box-msg-fundo">
+                <img id="logo" src="img/logo-m.png" alt="">
+                <img id="emoj" src="img/emoji-1.png" alt="">
+                <p id="texto">Ops! É preciso digitar um nome de usuário e senha.</p>
+                <p id="sub-texto">Que tal uma dica? Digite qualquer texto nos campos!!!</p>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
